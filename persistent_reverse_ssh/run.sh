@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -e
 
 CONFIG_DIR=/data/options.json
@@ -53,3 +53,4 @@ if [ "$AUTOSSH_MONITOR_PORT" -eq 0 ]; then
 else
     exec autossh -M "$AUTOSSH_MONITOR_PORT" "${SSH_CMD[@]}"
 fi
+
