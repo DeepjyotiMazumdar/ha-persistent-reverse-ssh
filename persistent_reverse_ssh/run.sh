@@ -1,4 +1,3 @@
-## run.sh
 #!/usr/bin/env bash
 set -e
 
@@ -63,4 +62,5 @@ if [ "$AUTOSSH_MONITOR_PORT" -eq 0 ]; then
 exec autossh -M 0 "${SSH_CMD[@]}"
 else
 exec autossh -M "$AUTOSSH_MONITOR_PORT" "${SSH_CMD[@]}"
+
 fi
