@@ -1,4 +1,5 @@
-FROM alpine:3.18
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 RUN apk add --no-cache openssh-client autossh bash ca-certificates jq \
     && mkdir -p /data
@@ -6,5 +7,6 @@ RUN apk add --no-cache openssh-client autossh bash ca-certificates jq \
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-CMD ["/bin/bash", "/run.sh"]
+CMD [ "/run.sh" ]
+
 
