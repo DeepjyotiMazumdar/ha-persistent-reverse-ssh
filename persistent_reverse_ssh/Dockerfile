@@ -6,4 +6,5 @@ RUN apk add --no-cache openssh-client autossh bash ca-certificates jq \
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-CMD ["bash", "/run.sh"]
+CMD ["/bin/bash", "/run.sh"]
+
